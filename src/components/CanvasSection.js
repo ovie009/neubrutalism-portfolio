@@ -4,7 +4,7 @@ import { useRef, useLayoutEffect, useState } from 'react';
 // import randomFloat from '../utils/randomFloat';
 // import distanceBetween from '../utils/distanceBetween';
 
-const minBall = 50;
+const minBall = 45;
 const maxBall = 60;
 const minBlank = 5;
 const maxBlank = 20;
@@ -300,8 +300,8 @@ const createBalls = (ctx, cw, ch) => {
         // generating random y position within the canvas width, taking the radius of the ball into account
         let y = randomInteger(radius, ch - radius);
         // generating random speed in both x and y direction between -0.9 and 0.9
-        let dx = randomFloat(-0.9, 0.9);
-        let dy = randomFloat(-0.9, 0.9);
+        let dx = randomFloat(-0.7, 0.7);
+        let dy = randomFloat(-0.7, 0.7);
         let velocity = {
             x: dx,
             y: dy
