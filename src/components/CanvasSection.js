@@ -19,12 +19,22 @@ const draw = (ctx, cw, ch, balls) => {
         ctx.lineWidth = 2; //set linewidth
         // set properties for balls with fill type
         if (ball.type === "fill") { 
+            ctx.shadowColor = "#000000";
+            ctx.shadowOffsetX = 4;
+            ctx.shadowOffsetY = 4;
             ctx.fillStyle = ball.ballFill; // ball fill color
-            ctx.strokeStyle = ball.ballStroke; // ball stroke colour
+            ctx.lineWidth = 0; //set linewidth
             ctx.fill(); // fill ball
-            ctx.stroke(); // stroke ball
+            ctx.strokeStyle = ball.ballStroke; // ball stroke colour
+            
+            ctx.shadowColor = "transparent";
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+            ctx.stroke();
+            // ctx.stroke(); // stroke ball
             ctx.fillStyle = ball.fontColor; // font color to write the text with
         } else if (ball.type === "stroke") { // set properties for balls with stroke type
+            ctx.lineWidth = 2; //set linewidth
             ctx.strokeStyle = ball.ballStroke; // stroke colour
             ctx.stroke(); // stroke ball
             ctx.fillStyle = ball.ballStroke; // font color to write the text with
@@ -48,6 +58,7 @@ const draw = (ctx, cw, ch, balls) => {
             let textY = ball.y - ball.fontSize/4; // y position of the text
             for (let i = 0; i < ball.words.length; i++) {
                 let textX = ball.x - 2 - ball.wordWidths[i]/2;
+                ctx.shadowColor = 'transparent'; // font color to write the text with
                 ctx.fillText(ball.words[i], textX, textY);
                 textY = textY + 16;
             }
