@@ -1,0 +1,73 @@
+.contact-section{
+    /* height: 100vh; */
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contact-wrapper{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    position: relative;
+}
+
+.contact-wrapper h2{
+    font-size: 30px;
+    z-index: 2;
+}
+
+.contact-wrapper input{
+    height: 50px;
+    padding-inline: 10px;
+    border: 1px solid #000000;
+    outline: none;
+    z-index: 2;
+}
+
+.contact-wrapper textarea{
+    padding: 10px;
+    outline: none;
+    resize: none;
+    border: 1px solid #000000;
+    z-index: 2;
+}
+
+.send-wrapper{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.send-mail{
+    height: 40px;
+    width: 100px;
+    color: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.contact-arrow{
+    width: 180px;
+    position: absolute;
+    right: 70px;
+    bottom: -40px;
+    z-index: 2;
+}
+
+.blob7{
+    
+    top: -30px;
+}
+
+.blob8{
+    right: 100px;
+    bottom: -80px;
+}
+

@@ -1,0 +1,41 @@
+footer{
+    height: 50vh;
+    margin-top: 100px;
+    padding: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer-list{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+}
+
+.footer-list-items{
+    list-style: none;
+}
+
+.footer-socials-list{
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.blob9{
+    left: 20px;
+    top: 20px;
+}
+
+.blob10{
+    right: 20px;
+    bottom: 20px;
+}

@@ -1,0 +1,45 @@
+.project-section{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-block: 100px;
+    gap: 60px;
+}
+
+.card{
+    width: 85%;
+    min-width: 260px;
+    max-width: 350px;
+    height: 380px;
+    z-index: 2;
+}
+
+.card-image-wrapper{
+    height: 70%;
+    border: 2px solid #000000;
+    border-bottom: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card-image{
+    height: 100%;
+    width: unset;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-text-wrapper{
+    height: 30%;
+    border: 2px solid #000000;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 7.6px;
+}
+
+.card-text-wrapper h2{
+    letter-spacing: 1px;
+}

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inria+Sans&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.blob{
+  position: absolute;
+  z-index: 1;
+}
+
+.app{
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, a, button{
+  font-family: 'Bebas Neue', cursive;
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+p, ::placeholder, input, textarea{
+  font-family: 'Inria Sans', sans-serif;
+}

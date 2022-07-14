@@ -1,0 +1,82 @@
+.hero{
+    min-height: calc(100vh - 80px);
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-inline: 20px;
+    z-index: 2;
+}
+
+.illustration-wrapper{
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.illustration{
+    width: 120%;
+    object-position: center;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.blob1{
+    top: 0;
+    right: 30px;
+}
+
+.blob2{
+    top: 35vh;
+    right: 30px;
+}
+
+.hero-text-wrapper{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.lead-text, .lead-paragraph{
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.name{
+    font-size: 80px;
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+
+.name strong{
+    text-shadow: 2px 2px 0 #000000;
+    letter-spacing: 1px;
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: black;
+}
+
+.cta-wrapper{
+    width: 100%;
+    height: 80px;
+    justify-content: flex-start;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-block: 40px;
+    position: relative;
+}
+
+.cta-wrapper img, .cta-wrapper a{ 
+    z-index: 2;
+}
+
+.blob3{
+    top: -50px;
+    left: 100px;
+}

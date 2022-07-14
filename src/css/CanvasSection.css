@@ -1,0 +1,49 @@
+.canvas-section{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 3;
+}
+
+.canvas-section-wrapper{
+    width: 100%;
+    border: 1px solid #000000;
+    z-index: 2 !important;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    transform: rotateZ(-1deg);
+    height: fit-content;
+}
+
+.canvas-section-wrapper h2{
+    z-index: 3 !important;
+    width: 100%;
+    font-size: 30px;
+    background-color: teal;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+}
+
+canvas{
+    width: 100%;
+    height: calc(100vh - 100px);
+    /* min-height: 1000px; */
+    background-color: white;
+    z-index: 2 !important;
+    margin: 0;
+}
+
+.blob5{
+    bottom: -60px;
+    left: 30px;
+}
+
+.blob6{
+    bottom: -100px;
+    right: 40px;
+}
