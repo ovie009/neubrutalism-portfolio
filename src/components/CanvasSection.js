@@ -90,7 +90,7 @@ const resizeCanvasToDisplaySize = (canvas) => {
         // console.log("🚀 ~ file: CanvasSection.js ~ line 86 ~ resizeCanvasToDisplaySize ~ areaOfCanvas", areaOfCanvas)
         // checking if the canvas can contain the balls to be generated
         while (totalPossibleOccupiedArea > areaOfCanvas) {
-            canvas.height += 50;
+            canvas.height += 100;
             areaOfCanvas = canvas.width * canvas.height;
             // console.log("🚀 ~ file: CanvasSection.js ~ line 86 ~ resizeCanvasToDisplaySize ~ areaOfCanvas", areaOfCanvas)
         }
@@ -149,7 +149,6 @@ const resolveCollision = (particle, otherParticle) => {
     }
 
 }
-
 
 // array storing all the stack text
 let  myStack = [
@@ -257,7 +256,6 @@ const colorArray = [
     "#3bc7be",
 ]
 
-
 for (let i = 0; i < colorArray.length; i++) {
     myStack.push({ 
         text:"blank",
@@ -300,8 +298,8 @@ const createBalls = (ctx, cw, ch) => {
         // generating random y position within the canvas width, taking the radius of the ball into account
         let y = randomInteger(radius, ch - radius);
         // generating random speed in both x and y direction between -0.9 and 0.9
-        let dx = randomFloat(-0.7, 0.7);
-        let dy = randomFloat(-0.7, 0.7);
+        let dx = randomFloat(-0.5, 0.5);
+        let dy = randomFloat(-0.5, 0.5);
         let velocity = {
             x: dx,
             y: dy
@@ -313,15 +311,14 @@ const createBalls = (ctx, cw, ch) => {
         // the type of ball would be selected from this array at random
         //  at a ration of 4:1 in favour of the stroke
         let typeArray = [
-            "stroke",
             "fill",
             "fill",
-            "stroke",
+            "fill",
             "stroke"
         ];
 
         // select ball type
-        let type = typeArray[randomInteger(0, 4)]
+        let type = typeArray[randomInteger(0, typeArray.length)]
 
         // select defaul colours
         let fontColor = myStack[i].textColor; // lightest colour in the array as font colour
