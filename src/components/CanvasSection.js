@@ -9,7 +9,7 @@ const maxBall = 60;
 const minBlank = 5;
 const maxBlank = 20;
 
-const draw = (ctx, cw, ch, balls) => {
+const draw = (ctx, cw, ch, balls, darkMode) => {
     ctx.clearRect(0, 0, cw, ch)
     balls.forEach(ball => {
         ctx.font = ball.fontSize+'px '+ball.fontFace; //set font property
@@ -19,9 +19,15 @@ const draw = (ctx, cw, ch, balls) => {
         ctx.lineWidth = 2; //set linewidth
         // set properties for balls with fill type
         if (ball.type === "fill") { 
-            ctx.shadowColor = "#000000";
+            ctx.shadowColor = darkMode ? "#FFFFFF" : "#000000";
             ctx.shadowOffsetX = 4;
             ctx.shadowOffsetY = 4;
+            
+            if (ball.words[0] === 'blank') {
+                ctx.shadowOffsetX = 2;
+                ctx.shadowOffsetY = 2;                
+            }
+
             ctx.fillStyle = ball.ballFill; // ball fill color
             ctx.lineWidth = 0; //set linewidth
             ctx.fill(); // fill ball
@@ -46,7 +52,9 @@ const draw = (ctx, cw, ch, balls) => {
             for (let i = 0; i < ball.words.length; i++) { //looping through the number of words for redundacy, already know its 1
                 let textY = ball.y + ball.fontSize/4; // y position of the text
                 let textX = ball.x - 2 - ball.wordWidths[i]/2; // x position of the text
-                
+                if (ball.words[i].length > 6) {
+                    textX = ball.x - 12 - ball.wordWidths[i]/2; // x position of the text
+                }
                 // if the word isn't "blank", fillText
                 if (ball.words[i] !== "blank") {
                     ctx.fillText(ball.words[i], textX, textY);
@@ -221,7 +229,7 @@ let  myStack = [
     { 
         text:"AJAX",
         textColor: "#2f8bcb",
-        fillColor: "#404040",
+        fillColor: "#000000",
     },
     { 
         text:"JQuery",
@@ -277,7 +285,7 @@ for (let i = 0; i < colorArray.length; i++) {
 
 const createBalls = (ctx, cw, ch) => {
     let balls = [];
-    let fontSize = 18; // set font size
+    let fontSize = 22; // set font size
     let responsiveFactor = 1; // variable to increase font size for bigger screens
     
     let numberOfStackBalls = myStack.length;
@@ -422,7 +430,7 @@ const CanvasSection = ({darkMode}) => {
 
                 // draw the ball in its new position
             });
-            draw(ctx, cw, ch, balls);
+            draw(ctx, cw, ch, balls, darkMode);
             
             animationFrameId = window.requestAnimationFrame(render)
 
@@ -435,7 +443,7 @@ const CanvasSection = ({darkMode}) => {
             balls = [];
         }
 
-    }, [])
+    }, [darkMode])
 
     return (
         <section className="canvas-section">
@@ -443,12 +451,12 @@ const CanvasSection = ({darkMode}) => {
                 boxShadow: `${darkMode ? '4px 4px 0 #FFFFFF' : '4px 4px 0 #000000'}`,
             }}>
                 <h2 style={{
-                    backgroundColor: `${darkMode ? '#404040' : '#9FDDBE'}`,
+                    backgroundColor: `${darkMode ? '#57B36F' : '#9FDDBE'}`,
                 }}>
                     My Stack
                 </h2>
                 <canvas ref={canvasRef} style={{
-                    backgroundColor: `${darkMode ? '#F2F2F2' : '#FFFFFF'}`,
+                    backgroundColor: `${darkMode ? '#404040' : '#FFFFFF'}`,
                     height: canvasHeight,
                 }} />
             </div>
