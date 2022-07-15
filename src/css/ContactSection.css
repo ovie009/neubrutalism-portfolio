@@ -48,7 +48,8 @@
 
 .send-mail{
     height: 40px;
-    width: 100px;
+    width: 150px;
+    z-index: 2;
     color: #FFFFFF;
     border: 1px solid #000000;
 }

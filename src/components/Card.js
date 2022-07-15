@@ -5,7 +5,7 @@ const Card = ({darkMode, card}) => {
             transform: card.rotation
         }}>
             <div className="card-image-wrapper" style={{
-                backgroundColor: `${darkMode ? '#BFBFBF' : '#9FDDBE'}`,
+                backgroundColor: `${darkMode ? '#57B36F' : '#9FDDBE'}`,
                 justifyContent: card.justifyContent,
                 alignItems: card.alignItems,
             }}>

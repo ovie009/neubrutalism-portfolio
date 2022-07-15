@@ -1,0 +1,33 @@
+.sidebar{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 4;
+    padding: 20px;
+}
+
+.sidebar-list{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-list-item{
+    color: inherit;
+    width: 100%;
+    padding-block: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-list a{
+    color: inherit;
+    width: 100%;
+    text-align: center;
+}

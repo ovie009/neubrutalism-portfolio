@@ -10,11 +10,11 @@ import Footer from './Footer';
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-
+  
+  
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
   }
-
   return (
     <div className='app' style={{
       backgroundColor: `${darkMode ? '#0D0D0D' : '#FFDCA8'}`,
