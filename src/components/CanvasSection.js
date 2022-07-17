@@ -1,8 +1,5 @@
 import '../css/CanvasSection.css';
 import { useRef, useLayoutEffect, useState } from 'react';
-// import randomInteger from '../utils/randomInteger';
-// import randomFloat from '../utils/randomFloat';
-// import distanceBetween from '../utils/distanceBetween';
 
 const minBall = 45;
 const maxBall = 60;
@@ -380,8 +377,6 @@ const CanvasSection = ({darkMode}) => {
 
         balls = createBalls(ctx, cw, ch);
 
-        // console.log(balls);
-        // eslint-disable-next-line
         let animationFrameId;
         
         //Our draw came here
@@ -432,15 +427,15 @@ const CanvasSection = ({darkMode}) => {
             });
             draw(ctx, cw, ch, balls, darkMode);
             
-            animationFrameId = window.requestAnimationFrame(render)
+            animationFrameId = window.requestAnimationFrame(render);
 
         }
 
         render();
 
         return () => {
-            // window.cancelAnimationFrame(animationFrameId);
             balls = [];
+            window.cancelAnimationFrame(animationFrameId)
         }
 
     }, [darkMode])

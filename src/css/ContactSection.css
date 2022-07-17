@@ -13,6 +13,7 @@
     flex-flow: column;
     gap: 20px;
     position: relative;
+    max-width: 600px;
 }
 
 .contact-wrapper h2{
@@ -71,4 +72,3 @@
     right: 100px;
     bottom: -80px;
 }
-

@@ -5,12 +5,13 @@
     justify-content: center;
     padding-block: 100px;
     gap: 60px;
+    padding-inline: 20px;
 }
 
 .card{
     width: 85%;
     min-width: 260px;
-    max-width: 350px;
+    max-width: 330px;
     height: 380px;
     z-index: 2;
 }

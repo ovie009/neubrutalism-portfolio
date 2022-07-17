@@ -1,6 +1,6 @@
 .sidebar{
     width: 300px;
-    height: 300px;
+    min-height: 250px;
     position: absolute;
     top: 80px;
     right: 0;
@@ -16,6 +16,7 @@
     list-style: none;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .sidebar-list-item{

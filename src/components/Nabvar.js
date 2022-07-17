@@ -32,6 +32,24 @@ const Navbar = ({darkMode, handleDarkMode}) => {
                             </button>
                         )
                     }
+                    <ul className="navbar-list">
+                        <li className="navbar-list-item">
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li className="navbar-list-item">
+                            <Link to="/">About</Link>
+                        </li>
+                        <li className="navbar-list-item">
+                            <Link to="/">Tutorials</Link>
+                        </li>
+                        <li className="navbar-list-item" style={{
+                                backgroundColor: `${darkMode ? '#57B36F' : '#9FDDBE'}`,
+                                border: `${darkMode ? '1px solid #FFFFFF' : '1px solid #000000'}`,
+                                boxShadow: `${darkMode ? '4px 4px 0 #FFFFFF' : '4px 4px 0 #000000'}`,
+                            }}>
+                            <Link to="/">Download Resumé</Link>
+                        </li>
+                    </ul>
                     <button className="open-sidebar" type="button" onClick={handleSidebar}>
                         <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line y1="1.5" x2="25" y2="1.5" stroke={darkMode ? '#FFFFFF' : '#000000'} strokeWidth="3"/>

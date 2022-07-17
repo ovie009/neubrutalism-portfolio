@@ -16,6 +16,8 @@
     flex-flow: column;
     transform: rotateZ(-1deg);
     height: fit-content;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .canvas-section-wrapper h2{
@@ -38,12 +40,3 @@ canvas{
     margin: 0;
 }
 
-.blob5{
-    bottom: -60px;
-    left: 30px;
-}
-
-.blob6{
-    bottom: -100px;
-    right: 40px;
-}

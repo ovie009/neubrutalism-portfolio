@@ -1,7 +1,7 @@
 .navbar{
     padding-inline: 20px;
     height: 80px;
-    width: 100vw;
+    width: 100%;
     display: grid;
     place-items: center;
 }
@@ -26,4 +26,31 @@
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+.navbar-list{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .navbar-list{
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .navbar-list-item{
+        padding: 10px;
+    }
+
+    .navbar-list-item a{
+        color: inherit;
+    }
+
+    .open-sidebar{
+        display: none;
+    }
+    
 }

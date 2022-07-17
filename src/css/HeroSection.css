@@ -1,6 +1,6 @@
 .hero{
     min-height: calc(100vh - 80px);
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -80,4 +80,74 @@
 .blob3{
     top: -50px;
     left: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    .illustration{
+        width: 100%;
+    }
+
+    .illustration-wrapper{
+        width: 80%;
+    }
+        
+    .blob1{
+        top: 50px;
+        right: 30px;
+    }
+        
+    .hero-text-wrapper{
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-wrapper{
+        justify-content: center;
+    }
+
+    .lead-paragraph{
+        max-width: 50ch;
+    }
+
+    
+}
+
+@media screen and (min-width: 1366px) {
+    .hero{
+        flex-flow: row-reverse;
+        justify-content: space-between;
+    }
+
+    .illustration-wrapper{
+        width: 60%;
+    }
+    
+    
+    .hero-text-wrapper{
+        width: 40%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .cta-wrapper{
+        justify-content: flex-start;
+    }
+
+    .lead-text, .lead-paragraph{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
+    .name{
+        font-size: 120px;
+    }
+    
+    .blob1{
+        display: none;
+    }
+    
+    .blob2{
+        display: none;
+    }
+
 }
